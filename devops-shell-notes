@@ -87,6 +87,83 @@ logrotate: Automatically rotates and compresses logs.
 
 Uses formats like .gzip or .zip to archive older logs.
 
+Example-Script-1:
+#!/bin/bash
+#
+#
+#
+#
+#
+###########
+#
+#
+#
+#
+################
+#
+#
+for i in {1..100};do
+        if (( (i % 3 == 0 || i % 5 == 0) && i % 15 != 0)); then
+                echo $i
+        fi
+done
+output:
+3
+5
+6
+9
+10
+12
+18
+20
+21
+24
+25
+27
+33
+35
+36
+39
+40
+42
+48
+50
+51
+54
+55
+57
+63
+65
+66
+69
+70
+72
+78
+80
+81
+84
+85
+87
+93
+95
+96
+99
+100
+
+Example-Script-2:
+#!/bin/bash
+#
+#
+#
+#
+#
+x="mississipi"
+
+
+grep -o "s" <<< "$x" | wc -l
+
+output:4
+
 Author: Deepakraj Ravi
 Use Case: Quick-reference DevOps & Linux notes for beginners and professionals.
 
