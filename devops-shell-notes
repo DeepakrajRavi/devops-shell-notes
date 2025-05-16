@@ -1,0 +1,92 @@
+# 🐧 DevOps Shell Scripting & Linux Basics
+
+## 🔰 Shebang
+```bash
+#!/bin/bash
+Used at the start of shell scripts to indicate the interpreter.
+
+🔐 File Permissions
+bash
+Copy
+Edit
+chmod 777 filename
+Sets full permissions (read, write, execute) for:
+
+7 – Owner (root)
+
+7 – Group
+
+7 – Others (me)
+
+Permission values:
+
+1 – Execute
+
+2 – Write
+
+4 – Read
+
+⚙️ Why Shell Scripts in DevOps?
+Shell scripts are widely used for:
+
+Infrastructure maintenance
+
+Lightweight automation on Linux systems
+
+Git operations
+
+Configuration management
+
+🧠 System Monitoring Commands
+Command	Description
+top	Live view of CPU, memory, and disk usage
+df -h	Human-readable disk usage info
+free	Displays memory usage
+nproc	Number of CPU cores
+
+🧰 Process Management
+ps -ef: Shows all running processes.
+
+ps -ef | grep "audited" | awk -F" " '{print $2}': Finds a specific process and prints its PID.
+
+kill -9 <PID>: Force kills a process by PID.
+
+🧪 Debugging & Execution
+set -x: Enable debug mode in shell scripts (logs each command before execution).
+
+sudo su -: Switch to root user.
+
+🔍 Log Analysis
+curl <log_file> or wget <url>: Downloads content or logs.
+
+Combine with grep:
+
+bash
+Copy
+Edit
+curl logfile.log | grep "ERROR"
+wget: Downloads files and saves them locally; useful for automation.
+
+🔎 File & Directory Utilities
+sudo find / -name pam: Searches entire system for folders/files named "pam".
+
+sort: Sorts lines in files alphabetically or numerically.
+
+🔁 Links
+Soft Links (Symbolic): Memory-based shortcuts to a file.
+
+Hard Links: Actual duplicate of the original file; can be reused even if the original is deleted.
+
+🌐 Network Utilities
+traceroute <hostname>: Tracks the route packets take.
+
+tracepath <hostname>: Similar to traceroute, often with fewer privileges.
+
+🔄 Log Management
+logrotate: Automatically rotates and compresses logs.
+
+Uses formats like .gzip or .zip to archive older logs.
+
+Author: Deepakraj Ravi
+Use Case: Quick-reference DevOps & Linux notes for beginners and professionals.
+
